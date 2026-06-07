@@ -1,0 +1,668 @@
+body{
+background-color: #F5F5F5;
+overflow-x: hidden;
+}
+
+
+header{
+background-color:#1A1A1A;
+padding: 20px 40px;
+border-radius: 10px;
+display: flex;
+align-items: center;
+color:white;
+}
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.texto{
+  flex: 1;
+}
+.texto h1{
+  font-size: 32px;
+  margin: 0;
+
+}
+.texto p{
+  font-size: 18px;
+  margin: 5px 0 0;
+}
+
+.logo{
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.logo img{
+width: 120px;
+height: 80px;
+object-fit: cover;
+}
+.redes{
+display: flex;
+gap: 15px;
+margin-left: auto;
+}
+.redes a{
+text-decoration: none;
+padding: 10px ;
+border-radius: 50px;
+
+}
+.redes img {
+  width: 25px;
+  height: 30px;
+  object-fit: contain;
+}
+
+nav{
+display: flex;
+justify-content: center;
+background-color:  #2E7D32;
+gap: 50px;
+padding: 15px;
+border-radius: px;
+margin-top: 10px;
+border-radius: 10px;
+transition: 0.3s;
+}
+nav a{
+background-color: transparent;
+color:rgb(255, 255, 255);
+text-decoration: none;
+  font-size: 16px;
+}
+nav a:hover{
+background-color: #43A047;
+
+}
+.contenido{
+display: flex;
+gap: 30px;
+background-color:#1A1A1A;
+border-radius: 10px;
+padding: 20px;
+margin-top: 20px;
+font-size: 18px;
+}
+
+.info{
+width: 60%;
+color: white;
+}
+.juga{
+width: 40%;
+margin:0%;
+}
+.juga img{
+width: 100%;
+display: block;
+border-radius: 10px;
+}
+
+
+
+
+.carrusel {
+  position: relative;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+  
+  
+}
+.carrusel h1{
+text-align: center;
+}
+.carrusel img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+.carrusel .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.55);
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.carrusel .btn:hover { background: rgb(34, 156, 18); }
+.carrusel .btn-prev { left: 10px; }
+.carrusel .btn-next { right: 10px; }
+
+
+
+.conte {
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+  gap: 35px;
+}
+
+.A {
+  width: 70%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 18px;
+}
+.A h1{
+  text-align: left;
+  font-size: 34px;
+}
+.A img {
+  width: 70%;
+  height: 100;
+  border-radius: 8px;
+  text-align: center;
+}
+.A video {
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 5px;
+  max-height: 100%;
+}
+
+.B {
+  width: 30%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 10px;
+  
+}
+.B img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.linea{
+  width: 100%;
+  height: 2px;
+  background-color: #d9d9d9;
+  margin: 30px 0;
+}
+.raya{
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  margin: 30px 0;
+}
+.recto{
+  width: 100%;
+  height: 2px;
+  background-color: #b5a99a;
+  margin: 30px 0;
+}
+
+  .cards-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px auto 40px;
+    padding: 10px 0;
+    max-width: 1200px;
+  }
+
+  .card {
+    background: #2a2a3e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 210px;
+    min-width: 210px;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 150px;
+    background: #888;
+    overflow: hidden;
+  }
+
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  .card-btn {
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .card-btn:hover {
+    background: #2563eb;
+  }
+
+  .balon .tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+    padding: 10px 0;
+    max-width: 1200px;
+  }
+
+  .tarjeta-jugador {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 220px;
+    min-width: 220px;
+    max-width: 280px;
+    border-left: 3px solid #efb810;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .tarjeta-jugador:hover {
+    transform: translateY(-4px);
+    background-color: #222;
+  }
+
+  .jugador-img {
+    width: 100%;
+    height: 140px;
+    background: #2a2a2a;
+    overflow: hidden;
+  }
+
+  .jugador-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .jugador-body {
+    padding: 12px;
+  }
+
+  .tarjeta-jugador h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .tarjeta-jugador p {
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1.5;
+  }
+
+  .tarjeta-jugador .tag {
+    display: inline-block;
+    background: #efb810;
+    color: #000;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+  }
+
+
+.www{
+max-width: 1100px;
+margin: 0 auto;
+background:white;
+padding: 20px;
+border-radius: 12px;
+margin-top: 4%;
+box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.18);
+}
+.xxx{
+background-color: #1A1A1A ;
+max-width: 1300px;
+margin: 0 auto;
+color:rgb(255, 255, 255);
+border-radius: 12px;
+padding: 20px;
+font-size: 16px;
+
+}
+.xxx p{
+color:#b5a99a;
+}
+
+
+
+.xxx img{
+
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.sidebar {
+  max-width: 300px;
+}
+
+.cita {
+  font-style: italic;
+  font-size: 20px;
+  color: #C9A84C;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tl-item {
+  border-left: 2px solid #C9A84C;
+  padding-left: 14px;
+  margin-bottom: 20px;
+}
+
+.tl-year {
+  color: #C9A84C;
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tl-item p {
+  color: #888070;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+
+/*despus del golden boy*/
+
+.w{
+max-width: 1100px;
+margin: 0 auto;
+background: rgb(236, 236, 236);
+padding: 20px;
+border-radius: 12px;
+margin-top: 4%;
+}
+.x{
+background-color: white;
+max-width: 1300px;
+margin: 0 auto;
+color:rgb(0, 0, 0);
+border-radius: 12px;
+padding: 20px;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+    gap: 8px;
+  }
+  .brand {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo img {
+    width: 70px;
+    height: 50px;
+  }
+  .redes {
+    margin-left: 0;
+    justify-content: center;
+  }
+  .texto h1 {
+    font-size: 17px;
+  }
+  .texto p {
+    font-size: 12px;
+  }
+
+  /* NAV */
+  nav {
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+  nav a {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,0.1);
+  }
+
+  /* CONTENIDO texto + imagen */
+  .contenido {
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .info {
+    width: 55%;
+  }
+  .juga {
+    width: 45%;
+  }
+  .info h1 {
+    font-size: 13px;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .info p {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .juga img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+  }
+
+  /* NOTICIAS — mantiene proporción 70/30 */
+  .conte {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .A {
+    width: 65%;
+    padding: 10px;
+    font-size: 11px;
+  }
+  .B {
+    width: 33%;
+    padding: 8px;
+  }
+  .A h1 {
+    font-size: 13px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .A h2, .A h3 {
+    font-size: 12px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  .A p, .B p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .A p[style] {
+    font-size: 10px !important;
+  }
+  .A img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+    margin: 6px 0;
+  }
+  .A video {
+    width: 100%;
+    border-radius: 6px;
+  }
+  .video-mundial {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+  .B h3 {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  .B img {
+    border-radius: 6px;
+  }
+  .linea {
+    margin: 10px 0;
+  }
+
+  /* CARDS DE LIGAS — 3 por fila */
+  .cards-row {
+    gap: 6px;
+    padding: 8px;
+    margin-top: 12px;
+  }
+  .card {
+    width: calc(33% - 6px);
+    min-width: unset;
+  }
+  .card-img {
+    height: 70px;
+  }
+  .card-body {
+    padding: 6px;
+  }
+  .card-title {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  .card-text {
+    font-size: 9px;
+    margin-bottom: 6px;
+  }
+  .card-btn {
+    font-size: 9px;
+    padding: 4px 6px;
+  }
+
+  /* CARRUSEL */
+  .carrusel {
+    margin-top: 12px;
+  }
+  .carrusel img {
+    height: 160px;
+  }
+  .carrusel h1 {
+    font-size: 15px;
+  }
+
+  /* BALON DE ORO — 3 por fila */
+  .balon {
+    margin-top: 12px;
+  }
+  .balon h1 {
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 10px;
+    border-bottom: 2px solid #efb810;
+    margin-bottom: 10px;
+  }
+  .balon .tarjetas {
+    gap: 6px;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tarjeta-jugador {
+    width: calc(33% - 6px);
+    min-width: unset;
+    max-width: unset;
+    flex: none;
+  }
+  .jugador-img {
+    height: 70px;
+  }
+  .jugador-body {
+    padding: 6px;
+  }
+  .tarjeta-jugador h3 {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  .tarjeta-jugador p {
+    font-size: 9px;
+    line-height: 1.3;
+  }
+  .tarjeta-jugador .tag {
+    font-size: 8px;
+    padding: 1px 5px;
+    margin-bottom: 4px;
+  }
+}
