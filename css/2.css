@@ -1,0 +1,619 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { 
+font-family: sans-serif; 
+line-height:1.6; 
+color:#222; 
+background:#212020;
+overflow-x: hidden;
+}
+/* Espaciado de textos */
+p { margin-bottom:1rem; }
+h1,h2,h3 { margin:0 0 0.5rem; }
+
+nav {
+  position: fixed;
+  top:0; left:0; right:0;
+  height: 55px;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 99;
+}
+nav img { height: 55px; }
+nav a { color:#ccc; text-decoration:none; margin-left:15px; font-size:14px; }
+nav a:hover { color:#fff; }
+ 
+.carrusel { margin-top:55px; overflow:hidden; position:relative; }
+.track { display:flex; transition: transform 0.6s ease; }
+.slide { min-width:100%; height:480px; position:relative; }
+.slide img { width:100%; height:100%; object-fit:cover; object-position:center center; display:block; }
+.slide .texto {
+  position:absolute; bottom:0; left:0; right:0;
+  padding:30px 28px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  color:#fff;
+}
+.slide .texto h2 { font-size:2.2rem; margin-bottom:8px; font-weight:700; }
+.slide .texto p  { color:#e6e6e6; font-size:1.15rem; line-height:1.3; }
+ 
+.dots {
+  position:absolute; bottom:12px; left:50%;
+  transform:translateX(-50%);
+  display:flex; gap:7px;
+}
+.btn {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color:#fff;
+  border:none;
+  padding:10px 12px;
+  font-size:18px;
+  cursor:pointer;
+  border-radius:6px;
+  z-index:10;
+}
+.btn:active { transform:translateY(-50%) scale(.98); }
+.btn-prev { left:12px; }
+.btn-next { right:12px; }
+.dot {
+  width:8px; height:8px; border-radius:50%;
+  background:rgba(255,255,255,0.4);
+  border:none; cursor:pointer;
+}
+.dot.active { background:#fff; transform:scale(1.3); }
+ 
+.contenido{
+display: flex;
+gap: 30px;
+border-radius: 10px;
+padding: 20px;
+margin-top: 20px;
+font-size: 18px;
+}
+
+.info{
+width: 60%;
+color: white;
+}
+.info p{
+font-size: 17px;
+}
+.juga{
+width: 40%;
+margin:0%;
+}
+.juga img{
+width: 100%;
+display: block;
+border-radius: 10px;
+
+}
+.www{
+max-width: 1100px;
+margin: 0 auto;
+padding: 20px;
+border-radius: 12px;
+margin-top: 4%;
+
+}
+.xxx{
+
+max-width: 1300px;
+margin: 0 auto;
+color:rgb(255, 255, 255);
+border-radius: 12px;
+padding: 20px;
+font-size: 16px;
+
+}
+.xxx p{
+color:#b5a99a;
+}
+
+
+
+.xxx img{
+
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cards-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px auto 40px;
+    padding: 10px 0;
+    max-width: 1200px;
+  }
+
+  .card {
+    background: #2a2a3e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 210px;
+    min-width: 210px;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 150px;
+    background: #888;
+    overflow: hidden;
+  }
+
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  .card-btn {
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .card-btn:hover {
+    background: #2563eb;
+  }
+
+  .balon .tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+    padding: 10px 0;
+    max-width: 1200px;
+  }
+
+  .tarjeta-jugador {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 220px;
+    min-width: 220px;
+    max-width: 280px;
+    border-left: 3px solid #efb810;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .tarjeta-jugador:hover {
+    transform: translateY(-4px);
+    background-color: #222;
+  }
+
+  .jugador-img {
+    width: 100%;
+    height: 140px;
+    background: #2a2a2a;
+    overflow: hidden;
+  }
+
+  .jugador-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .jugador-body {
+    padding: 12px;
+  }
+
+  .tarjeta-jugador h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .tarjeta-jugador p {
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1.5;
+  }
+
+  .tarjeta-jugador .tag {
+    display: inline-block;
+    background: #efb810;
+    color: #000;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+  }
+
+.curisos{
+
+}
+.curi p{
+color: white;
+
+}
+.curi h1{
+text-align: center;
+color: white;
+}
+  .curi-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+  }
+  .curi h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .curi-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #888;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+  }
+  .curi-divider {
+    width: 60px;
+    height: 3px;
+    background: #efb810;
+    margin: 16px auto 48px;
+    border-radius: 2px;
+  }
+  .curi-section-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #efb810;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .curi-section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #2e2e2e;
+  }
+ 
+  /* ---- RECORDS ---- */
+  .curi-records {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 56px;
+  }
+  .curi-rec {
+    background: #1a1a1a;
+    border-left: 3px solid #efb810;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background .2s, transform .2s;
+  }
+  .curi-rec:hover {
+    background: #222;
+    transform: translateY(-3px);
+  }
+  .curi-rec-imgwrap {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background: #111;
+  }
+  .curi-rec-imgwrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    filter: grayscale(15%);
+    transition: transform .3s;
+  }
+  .curi-rec:hover .curi-rec-imgwrap img {
+    transform: scale(1.04);
+  }
+  .curi-rec-icon-wrap {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    font-size: 2.8rem;
+  }
+  .curi-rec-body {
+    padding: 16px;
+  }
+  .curi-rec-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #efb810;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .curi-rec-val {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .curi-rec-desc {
+    font-size: 0.78rem;
+    color: #888;
+    line-height: 1.55;
+  }
+ 
+  /* ---- JOVEN / VETERANO ---- */
+  .curi-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+  @media (max-width: 560px) { .curi-duo { grid-template-columns: 1fr; } }
+ 
+  .curi-age-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    transition: border-color .2s;
+  }
+  .curi-age-card:hover { border-color: #efb810; }
+  .curi-age-img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    filter: grayscale(15%);
+  }
+  .curi-age-body { padding: 20px; }
+  .curi-age-tag {
+    display: inline-block;
+    background: #efb810;
+    color: #000;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
+  .curi-age-nombre {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+  .curi-age-pais {
+    font-size: 0.8rem;
+    color: #efb810;
+    margin-bottom: 12px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .curi-age-pais img {
+    height: 14px;
+    border-radius: 2px;
+  }
+  .curi-age-num {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #efb810;
+    line-height: 1;
+    font-family: sans-serif;
+  }
+  .curi-age-unit {
+    font-size: 0.72rem;
+    color: #666;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-bottom: 12px;
+  }
+  .curi-age-desc {
+    font-size: 0.8rem;
+    color: #888;
+    line-height: 1.55;
+    border-top: 1px solid #2e2e2e;
+    padding-top: 12px;
+    margin-top: 8px;
+  }
+ 
+  /* ---- PAÍSES ---- */
+  .curi-pais-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+  .curi-pais-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 16px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #222;
+    transition: border-color .2s, background .2s;
+  }
+  .curi-pais-row:hover {
+    border-color: #efb810;
+    background: #1f1f1f;
+  }
+  .curi-pais-pos {
+    font-size: 0.75rem;
+    color: #555;
+    font-family: sans-serif;
+    min-width: 18px;
+    text-align: center;
+  }
+  .curi-pais-pos.oro { color: #efb810; font-weight: 700; }
+  .curi-pais-flag {
+    width: 36px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+    flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,.4);
+  }
+  .curi-pais-info { flex: 1; }
+  .curi-pais-nombre {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .curi-pais-jugadores {
+    font-size: 0.72rem;
+    color: #666;
+    font-family: sans-serif;
+    margin-top: 2px;
+  }
+  .curi-pais-barra {
+    width: 90px;
+    height: 4px;
+    background: #2a2a2a;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  @media (max-width: 500px) { .curi-pais-barra { display: none; } }
+  .curi-pais-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #efb810, #f5d060);
+    border-radius: 2px;
+  }
+  .curi-pais-num {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #efb810;
+    font-family: sans-serif;
+    min-width: 24px;
+    text-align: right;
+  }
+@media (max-width:480px) {
+  .slide { height:380px; }
+  .slide .texto h2 { font-size:1.1rem; }
+  .slide-content { padding:1.25rem 1.25rem 2.5rem; }
+}
+@media (max-width: 768px) {
+  .contenido {
+    flex-direction: column;
+  }
+  .info, .juga {
+    width: 100%;
+  }
+  .curi-duo {
+    grid-template-columns: 1fr;
+  }
+  .cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+    min-width: unset;
+  }
+  .balon .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tarjeta-jugador {
+    max-width: 90%;
+    min-width: unset;
+    flex: unset;
+    width: 90%;
+  }
+  .xxx img {
+    width: 100%;
+  }
+  .curi-records {
+    grid-template-columns: 1fr;
+  }
+  .curi-pais-barra {
+    display: none;
+  }
+  nav a {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  .slide {
+    height: 280px;
+  }
+  .slide .texto h2 {
+    font-size: 1.3rem;
+  }
+  .slide .texto p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav img {
+    height: 40px;
+  }
+  nav a {
+    font-size: 11px;
+    margin-left: 6px;
+  }
+  .slide {
+    height: 220px;
+  }
+  .www {
+    padding: 10px;
+  }
+  .curi-wrapper {
+    padding: 10px 10px 40px;
+  }
+  .curi-age-num {
+    font-size: 2.2rem;
+  }
+}
